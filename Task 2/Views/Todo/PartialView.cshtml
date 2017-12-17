@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "PartialView";
+    Layout = "_Layout";
+}
+
+@using Models
+@model PartialModel
+
+@if (Model.IndexViewModel != null)
+{
+    <br />
+    <br />
+    foreach (TodoViewModel tv in Model.IndexViewModel.TodoList)
+    {
+        <span style="margin-right: 5px"><b>@tv.Title</b></span>
+        <span style="color: red"><b>@tv.getDateDueText()</b></span>
+        <br />
+        @tv.getDateDueOther()
+        <br />
+        <b>@Html.ActionLink("Mark as completed", "MarkAsCompleted", new { id = tv.id })</b>
+        <br />
+        <br />
+        <br />
+    }
+}
+@if (Model.CompletedViewModel != null)
+{
+    <br />
+    <br />
+    foreach (TodoViewModel tv in Model.CompletedViewModel.TodoList)
+    {
+        <span style="margin-right: 5px"><b>@tv.Title</b></span>
+        <br />
+        @(tv.DateCompleted.GetValueOrDefault().ToLongDateString())
+        <br />
+        <b>@Html.ActionLink("Remove from completed", "RemoveFromCompleted", new { id = tv.id })</b>
+        <br />
+        <br />
+        <br />
+    }
+}

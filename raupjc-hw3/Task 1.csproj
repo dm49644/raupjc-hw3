@@ -7,8 +7,8 @@
     <ProjectGuid>{3D8D3E0D-FE8D-4589-8CF3-73DB77786CAC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>raupjc_hw3</RootNamespace>
-    <AssemblyName>raupjc-hw3</AssemblyName>
+    <RootNamespace>Task_1</RootNamespace>
+    <AssemblyName>Task 1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

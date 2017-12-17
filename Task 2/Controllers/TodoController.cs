@@ -27,8 +27,11 @@ namespace Task_2.Controllers
         public async Task<IActionResult> Index()
         {
             ApplicationUser currentUser = await _userManager.GetUserAsync(HttpContext.User);
-            IndexViewModel ivm = new IndexViewModel(_repository.GetActive(new Guid(currentUser.Id)));
-            return View(ivm);
+            PartialModel model = new PartialModel
+            {
+                IndexViewModel = new IndexViewModel(_repository.GetActive(new Guid(currentUser.Id)))
+            };
+            return View(model);
         }
 
         public async Task<IActionResult> Labels()
@@ -40,8 +43,11 @@ namespace Task_2.Controllers
         public async Task<IActionResult> Completed()
         {
             ApplicationUser currentUser = await _userManager.GetUserAsync(HttpContext.User);
-            CompletedViewModel cvm = new CompletedViewModel(_repository.GetCompleted(new Guid(currentUser.Id)));
-            return View(cvm);
+            PartialModel model = new PartialModel
+            {
+                CompletedViewModel = new CompletedViewModel(_repository.GetCompleted(new Guid(currentUser.Id)))
+            };
+            return View(model);
         }
 
         public async Task<IActionResult> Add()
