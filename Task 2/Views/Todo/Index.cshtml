@@ -1,0 +1,38 @@
+﻿@using Task_2.Models
+@model Task_2.Models.IndexViewModel
+@{
+    ViewData["Title"] = "TodoList";
+    Layout = "_Layout";
+}
+
+
+<html>
+<br />
+<h1>Todo</h1>
+<a asp-controller="Todo" asp-action="Add"><span style="margin-right: 20px"><b>Add new todo</b></span></a>
+<a asp-controller="Todo" asp-action="Completed"></span><b>See completed todos</b></a>
+<head>
+
+    @if (Model != null)
+    {
+        <br />
+        <br />
+        foreach (TodoViewModel tv in Model.TodoList)
+        {
+            <span style="margin-right: 5px"><b>@tv.Title</b></span>
+            <span style="color: red"><b>@tv.getDateDueText()</b></span>
+            <br />
+            @tv.getDateDueOther()
+            <br />
+            <b>@Html.ActionLink("Mark as completed", "MarkAsCompleted", new { id = tv.id })</b>
+            <br />
+            <br />
+            <br />
+        }
+    }
+</head>
+<body>
+<div>
+</div>
+</body>
+</html>

@@ -1,0 +1,797 @@
+2017-12-16 10:22:32.682 +01:00 [Error] An unhandled exception has occurred while executing the request
+System.InvalidOperationException: No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+   at System.Data.Entity.Infrastructure.DependencyResolution.DefaultProviderServicesResolver.GetService(Type type, Object key)
+   at System.Data.Entity.Infrastructure.DependencyResolution.CachingDependencyResolver.<>c__DisplayClass1.<GetService>b__0(Tuple`2 k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at System.Data.Entity.Infrastructure.DependencyResolution.CachingDependencyResolver.GetService(Type type, Object key)
+   at System.Data.Entity.Infrastructure.DependencyResolution.ResolverChain.<>c__DisplayClass3.<GetService>b__0(IDbDependencyResolver r)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at System.Data.Entity.Infrastructure.DependencyResolution.ResolverChain.GetService(Type type, Object key)
+   at System.Data.Entity.Infrastructure.DependencyResolution.RootDependencyResolver.GetService(Type type, Object key)
+   at System.Data.Entity.Infrastructure.DependencyResolution.ResolverChain.<>c__DisplayClass3.<GetService>b__0(IDbDependencyResolver r)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at System.Data.Entity.Infrastructure.DependencyResolution.ResolverChain.GetService(Type type, Object key)
+   at System.Data.Entity.Infrastructure.DependencyResolution.CompositeResolver`2.GetService(Type type, Object key)
+   at System.Data.Entity.Infrastructure.DependencyResolution.DbDependencyResolverExtensions.GetService[T](IDbDependencyResolver resolver, Object key)
+   at System.Data.Entity.Utilities.DbProviderFactoryExtensions.GetProviderServices(DbProviderFactory factory)
+   at System.Data.Entity.Infrastructure.DefaultManifestTokenResolver.<>c__DisplayClass1.<ResolveManifestToken>b__0(Tuple`3 k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at System.Data.Entity.Infrastructure.DefaultManifestTokenResolver.ResolveManifestToken(DbConnection connection)
+   at System.Data.Entity.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at Task_1.TodoSqlRepository.Add(TodoItem todoItem) in C:\Users\Domagoj\Documents\raupjc-hw3\raupjc-hw3\TodoSqlRepository.cs:line 33
+   at Task_2.Controllers.TodoController.<Add>d__5.MoveNext() in C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Controllers\TodoController.cs:line 47
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-12-16 10:25:33.441 +01:00 [Error] An unhandled exception has occurred while executing the request
+System.InvalidOperationException: The property 'IsCompleted' is not a declared property on type 'TodoItem'. Verify that the property has not been explicitly excluded from the model by using the Ignore method or NotMappedAttribute data annotation. Make sure that it is a valid primitive property.
+   at System.Data.Entity.ModelConfiguration.Configuration.Types.StructuralTypeConfiguration.Configure(String structuralTypeName, IEnumerable`1 properties, IEnumerable`1 propertyPath, PrimitivePropertyConfiguration propertyConfiguration)
+   at System.Data.Entity.ModelConfiguration.Configuration.Types.StructuralTypeConfiguration.Configure(String structuralTypeName, IEnumerable`1 properties, ICollection`1 dataModelAnnotations)
+   at System.Data.Entity.ModelConfiguration.Configuration.Types.EntityTypeConfiguration.Configure(EntityType entityType, EdmModel model)
+   at System.Data.Entity.ModelConfiguration.Configuration.ModelConfiguration.ConfigureEntities(EdmModel model)
+   at System.Data.Entity.DbModelBuilder.Build(DbProviderManifest providerManifest, DbProviderInfo providerInfo)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at Task_1.TodoSqlRepository.Add(TodoItem todoItem) in C:\Users\Domagoj\Documents\raupjc-hw3\raupjc-hw3\TodoSqlRepository.cs:line 33
+   at Task_2.Controllers.TodoController.<Add>d__5.MoveNext() in C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Controllers\TodoController.cs:line 47
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-12-16 13:10:44.027 +01:00 [Error] An unhandled exception has occurred while executing the request
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Task_1.TodoSqlRepository.Remove(Guid todoId, Guid userId) in C:\Users\Domagoj\Documents\raupjc-hw3\raupjc-hw3\TodoSqlRepository.cs:line 44
+   at Task_2.Controllers.TodoController.<RemoveFromCompleted>d__7.MoveNext() in C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Controllers\TodoController.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-12-16 13:47:40.240 +01:00 [Error] An unhandled exception has occurred while executing the request
+System.InvalidOperationException: Nullable object must have a value.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at Task_2.Pages.Index_View.<<ExecuteAsync>b__12_2>d.MoveNext() in C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.<SetOutputContentAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Task_2.Pages.Index_View.<ExecuteAsync>d__12.MoveNext() in C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml:line 5
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageCoreAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-12-16 13:51:11.684 +01:00 [Error] An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,29): error CS1026: ) expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,29): error CS1002: ; expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,108): error CS1002: ; expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,108): error CS1513: } expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,108): error CS1513: } expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,108): error CS1513: } expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(24,6): error CS1520: Method must have a return type
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,23): error CS1501: No overload for method 'Write' takes 0 arguments
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(21,19): error CS0103: The name 'tv' does not exist in the current context
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(22,14): error CS0103: The name 'Html' does not exist in the current context
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(22,78): error CS0103: The name 'tv' does not exist in the current context
+q55q45kt.zda(182,30): error CS1001: Identifier expected
+q55q45kt.zda(182,33): error CS1031: Type expected
+q55q45kt.zda(182,33): error CS1001: Identifier expected
+q55q45kt.zda(182,35): error CS1031: Type expected
+q55q45kt.zda(182,35): error CS1001: Identifier expected
+q55q45kt.zda(182,35): error CS1003: Syntax error, ',' expected
+q55q45kt.zda(182,38): error CS1031: Type expected
+q55q45kt.zda(182,38): error CS1001: Identifier expected
+q55q45kt.zda(182,38): error CS1003: Syntax error, ',' expected
+q55q45kt.zda(182,44): error CS1520: Method must have a return type
+q55q45kt.zda(183,30): error CS1001: Identifier expected
+q55q45kt.zda(183,36): error CS1520: Method must have a return type
+q55q45kt.zda(186,13): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(187,13): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(187,71): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(187,152): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(187,154): error CS8124: Tuple must contain at least two elements.
+q55q45kt.zda(187,155): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(188,41): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(188,102): error CS8124: Tuple must contain at least two elements.
+q55q45kt.zda(188,103): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(189,73): error CS1001: Identifier expected
+q55q45kt.zda(190,13): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(190,17): error CS1031: Type expected
+q55q45kt.zda(190,17): error CS8124: Tuple must contain at least two elements.
+q55q45kt.zda(190,17): error CS1026: ) expected
+q55q45kt.zda(190,17): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(190,53): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(190,70): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(193,13): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(193,14): error CS1520: Method must have a return type
+q55q45kt.zda(194,53): error CS1001: Identifier expected
+q55q45kt.zda(195,13): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(195,41): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(195,67): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(195,71): error CS8124: Tuple must contain at least two elements.
+q55q45kt.zda(195,72): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(195,73): error CS1520: Method must have a return type
+q55q45kt.zda(196,26): error CS1520: Method must have a return type
+q55q45kt.zda(197,26): error CS1001: Identifier expected
+q55q45kt.zda(197,29): error CS1031: Type expected
+q55q45kt.zda(197,29): error CS1001: Identifier expected
+q55q45kt.zda(197,31): error CS1031: Type expected
+q55q45kt.zda(197,31): error CS1001: Identifier expected
+q55q45kt.zda(197,31): error CS1003: Syntax error, ',' expected
+q55q45kt.zda(197,34): error CS1031: Type expected
+q55q45kt.zda(197,34): error CS1001: Identifier expected
+q55q45kt.zda(197,34): error CS1003: Syntax error, ',' expected
+q55q45kt.zda(197,40): error CS1520: Method must have a return type
+q55q45kt.zda(198,26): error CS1001: Identifier expected
+q55q45kt.zda(198,34): error CS1520: Method must have a return type
+q55q45kt.zda(199,26): error CS1520: Method must have a return type
+q55q45kt.zda(200,26): error CS1001: Identifier expected
+q55q45kt.zda(200,29): error CS1031: Type expected
+q55q45kt.zda(200,29): error CS1001: Identifier expected
+q55q45kt.zda(200,31): error CS1031: Type expected
+q55q45kt.zda(200,31): error CS1001: Identifier expected
+q55q45kt.zda(200,31): error CS1003: Syntax error, ',' expected
+q55q45kt.zda(200,35): error CS1031: Type expected
+q55q45kt.zda(200,35): error CS1001: Identifier expected
+q55q45kt.zda(200,35): error CS1003: Syntax error, ',' expected
+q55q45kt.zda(201,13): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(201,41): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(201,67): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(201,73): error CS1031: Type expected
+q55q45kt.zda(201,73): error CS8124: Tuple must contain at least two elements.
+q55q45kt.zda(201,73): error CS1026: ) expected
+q55q45kt.zda(201,73): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(201,135): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(201,152): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(201,190): error CS1520: Method must have a return type
+q55q45kt.zda(201,201): error CS1525: Invalid expression term '{'
+q55q45kt.zda(201,201): error CS1002: ; expected
+q55q45kt.zda(201,201): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(201,202): error CS1520: Method must have a return type
+q55q45kt.zda(202,30): error CS1001: Identifier expected
+q55q45kt.zda(202,33): error CS1031: Type expected
+q55q45kt.zda(202,33): error CS1001: Identifier expected
+q55q45kt.zda(202,35): error CS1031: Type expected
+q55q45kt.zda(202,35): error CS1001: Identifier expected
+q55q45kt.zda(202,35): error CS1003: Syntax error, ',' expected
+q55q45kt.zda(202,39): error CS1031: Type expected
+q55q45kt.zda(202,39): error CS1001: Identifier expected
+q55q45kt.zda(202,39): error CS1003: Syntax error, ',' expected
+q55q45kt.zda(202,45): error CS1520: Method must have a return type
+q55q45kt.zda(203,30): error CS1001: Identifier expected
+q55q45kt.zda(203,57): error CS1520: Method must have a return type
+q55q45kt.zda(205,13): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(206,13): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(207,13): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(207,71): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(207,152): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(207,154): error CS8124: Tuple must contain at least two elements.
+q55q45kt.zda(207,155): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(208,41): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(208,102): error CS8124: Tuple must contain at least two elements.
+q55q45kt.zda(208,103): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(209,73): error CS1001: Identifier expected
+q55q45kt.zda(210,13): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(210,17): error CS1031: Type expected
+q55q45kt.zda(210,17): error CS8124: Tuple must contain at least two elements.
+q55q45kt.zda(210,17): error CS1026: ) expected
+q55q45kt.zda(210,17): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(210,53): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(210,70): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(213,13): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(213,14): error CS1520: Method must have a return type
+q55q45kt.zda(214,53): error CS1001: Identifier expected
+q55q45kt.zda(215,13): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(215,41): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(215,67): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(215,71): error CS8124: Tuple must contain at least two elements.
+q55q45kt.zda(215,72): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(215,73): error CS1520: Method must have a return type
+q55q45kt.zda(216,26): error CS1520: Method must have a return type
+q55q45kt.zda(217,26): error CS1001: Identifier expected
+q55q45kt.zda(217,29): error CS1031: Type expected
+q55q45kt.zda(217,29): error CS1001: Identifier expected
+q55q45kt.zda(217,31): error CS1031: Type expected
+q55q45kt.zda(217,31): error CS1001: Identifier expected
+q55q45kt.zda(217,31): error CS1003: Syntax error, ',' expected
+q55q45kt.zda(217,35): error CS1031: Type expected
+q55q45kt.zda(217,35): error CS1001: Identifier expected
+q55q45kt.zda(217,35): error CS1003: Syntax error, ',' expected
+q55q45kt.zda(217,41): error CS1520: Method must have a return type
+q55q45kt.zda(218,26): error CS1001: Identifier expected
+q55q45kt.zda(218,43): error CS1520: Method must have a return type
+q55q45kt.zda(220,9): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(232,5): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(233,1): error CS1022: Type or namespace definition, or end-of-file expected
+q55q45kt.zda(189,19): error CS0246: The type or namespace name '__tagHelperRunner' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(192,23): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(209,19): error CS0246: The type or namespace name '__tagHelperRunner' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(212,23): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(223,87): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(225,60): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(227,70): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(229,71): error CS0116: A namespace cannot directly contain members such as fields or methods
+q55q45kt.zda(182,17): error CS0501: '<invalid-global-code>.BeginContext(?, ?, ?)' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(194,19): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(194,13): error CS0501: '<invalid-global-code>.Write(__tagHelperExecutionContext.Output)' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(183,17): error CS0501: '<invalid-global-code>.WriteLiteral()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(184,17): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(214,19): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(214,13): error CS0501: '<invalid-global-code>.Write(__tagHelperExecutionContext.Output)' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(196,13): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(199,13): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(204,17): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(216,13): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(219,13): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(197,13): error CS0501: '<invalid-global-code>.BeginContext(?, ?, ?)' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(200,13): error CS0501: '<invalid-global-code>.BeginContext(?, ?, ?)' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(202,17): error CS0501: '<invalid-global-code>.BeginContext(?, ?, ?)' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(217,13): error CS0501: '<invalid-global-code>.BeginContext(?, ?, ?)' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(198,13): error CS0501: '<invalid-global-code>.WriteLiteral()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(203,17): error CS0501: '<invalid-global-code>.WriteLiteral()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(218,13): error CS0501: '<invalid-global-code>.WriteLiteral()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(189,46): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(189,13): error CS0246: The type or namespace name 'await' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(189,19): error CS0538: '__tagHelperRunner' in explicit interface declaration is not an interface
+q55q45kt.zda(189,37): error CS0501: '<invalid-global-code>.RunAsync(__tagHelperExecutionContext)' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(209,46): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(209,13): error CS0246: The type or namespace name 'await' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(209,19): error CS0538: '__tagHelperRunner' in explicit interface declaration is not an interface
+q55q45kt.zda(209,37): error CS0501: '<invalid-global-code>.RunAsync(__tagHelperExecutionContext)' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(192,17): error CS0246: The type or namespace name 'await' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(192,23): error CS0538: '__tagHelperExecutionContext' in explicit interface declaration is not an interface
+q55q45kt.zda(192,51): error CS0501: '<invalid-global-code>.SetOutputContentAsync()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(212,17): error CS0246: The type or namespace name 'await' could not be found (are you missing a using directive or an assembly reference?)
+q55q45kt.zda(212,23): error CS0538: '__tagHelperExecutionContext' in explicit interface declaration is not an interface
+q55q45kt.zda(212,51): error CS0501: '<invalid-global-code>.SetOutputContentAsync()' must declare a body because it is not marked abstract, extern, or partial
+q55q45kt.zda(209,37): error CS0111: Type '<invalid-global-code>' already defines a member called '__tagHelperRunner.RunAsync' with the same parameter types
+q55q45kt.zda(212,51): error CS0111: Type '<invalid-global-code>' already defines a member called '__tagHelperExecutionContext.SetOutputContentAsync' with the same parameter types
+q55q45kt.zda(214,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'Write' with the same parameter types
+q55q45kt.zda(199,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'EndContext' with the same parameter types
+q55q45kt.zda(204,17): error CS0111: Type '<invalid-global-code>' already defines a member called 'EndContext' with the same parameter types
+q55q45kt.zda(216,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'EndContext' with the same parameter types
+q55q45kt.zda(219,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'EndContext' with the same parameter types
+q55q45kt.zda(200,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'BeginContext' with the same parameter types
+q55q45kt.zda(202,17): error CS0111: Type '<invalid-global-code>' already defines a member called 'BeginContext' with the same parameter types
+q55q45kt.zda(217,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'BeginContext' with the same parameter types
+q55q45kt.zda(203,17): error CS0111: Type '<invalid-global-code>' already defines a member called 'WriteLiteral' with the same parameter types
+q55q45kt.zda(218,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'WriteLiteral' with the same parameter types
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-12-16 13:59:58.596 +01:00 [Error] An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,29): error CS1026: ) expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,29): error CS1002: ; expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,108): error CS1002: ; expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,108): error CS1513: } expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,108): error CS1513: } expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,108): error CS1513: } expected
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(24,6): error CS1520: Method must have a return type
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(20,23): error CS1501: No overload for method 'Write' takes 0 arguments
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(21,19): error CS0103: The name 'tv' does not exist in the current context
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(22,14): error CS0103: The name 'Html' does not exist in the current context
+C:\Users\Domagoj\Documents\raupjc-hw3\Task 2\Views\Todo\Index.cshtml(22,78): error CS0103: The name 'tv' does not exist in the current context
+rns4z13w.o0a(182,30): error CS1001: Identifier expected
+rns4z13w.o0a(182,33): error CS1031: Type expected
+rns4z13w.o0a(182,33): error CS1001: Identifier expected
+rns4z13w.o0a(182,35): error CS1031: Type expected
+rns4z13w.o0a(182,35): error CS1001: Identifier expected
+rns4z13w.o0a(182,35): error CS1003: Syntax error, ',' expected
+rns4z13w.o0a(182,38): error CS1031: Type expected
+rns4z13w.o0a(182,38): error CS1001: Identifier expected
+rns4z13w.o0a(182,38): error CS1003: Syntax error, ',' expected
+rns4z13w.o0a(182,44): error CS1520: Method must have a return type
+rns4z13w.o0a(183,30): error CS1001: Identifier expected
+rns4z13w.o0a(183,36): error CS1520: Method must have a return type
+rns4z13w.o0a(186,13): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(187,13): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(187,71): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(187,152): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(187,154): error CS8124: Tuple must contain at least two elements.
+rns4z13w.o0a(187,155): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(188,41): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(188,102): error CS8124: Tuple must contain at least two elements.
+rns4z13w.o0a(188,103): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(189,73): error CS1001: Identifier expected
+rns4z13w.o0a(190,13): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(190,17): error CS1031: Type expected
+rns4z13w.o0a(190,17): error CS8124: Tuple must contain at least two elements.
+rns4z13w.o0a(190,17): error CS1026: ) expected
+rns4z13w.o0a(190,17): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(190,53): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(190,70): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(193,13): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(193,14): error CS1520: Method must have a return type
+rns4z13w.o0a(194,53): error CS1001: Identifier expected
+rns4z13w.o0a(195,13): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(195,41): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(195,67): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(195,71): error CS8124: Tuple must contain at least two elements.
+rns4z13w.o0a(195,72): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(195,73): error CS1520: Method must have a return type
+rns4z13w.o0a(196,26): error CS1520: Method must have a return type
+rns4z13w.o0a(197,26): error CS1001: Identifier expected
+rns4z13w.o0a(197,29): error CS1031: Type expected
+rns4z13w.o0a(197,29): error CS1001: Identifier expected
+rns4z13w.o0a(197,31): error CS1031: Type expected
+rns4z13w.o0a(197,31): error CS1001: Identifier expected
+rns4z13w.o0a(197,31): error CS1003: Syntax error, ',' expected
+rns4z13w.o0a(197,34): error CS1031: Type expected
+rns4z13w.o0a(197,34): error CS1001: Identifier expected
+rns4z13w.o0a(197,34): error CS1003: Syntax error, ',' expected
+rns4z13w.o0a(197,40): error CS1520: Method must have a return type
+rns4z13w.o0a(198,26): error CS1001: Identifier expected
+rns4z13w.o0a(198,34): error CS1520: Method must have a return type
+rns4z13w.o0a(199,26): error CS1520: Method must have a return type
+rns4z13w.o0a(200,26): error CS1001: Identifier expected
+rns4z13w.o0a(200,29): error CS1031: Type expected
+rns4z13w.o0a(200,29): error CS1001: Identifier expected
+rns4z13w.o0a(200,31): error CS1031: Type expected
+rns4z13w.o0a(200,31): error CS1001: Identifier expected
+rns4z13w.o0a(200,31): error CS1003: Syntax error, ',' expected
+rns4z13w.o0a(200,35): error CS1031: Type expected
+rns4z13w.o0a(200,35): error CS1001: Identifier expected
+rns4z13w.o0a(200,35): error CS1003: Syntax error, ',' expected
+rns4z13w.o0a(201,13): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(201,41): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(201,67): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(201,73): error CS1031: Type expected
+rns4z13w.o0a(201,73): error CS8124: Tuple must contain at least two elements.
+rns4z13w.o0a(201,73): error CS1026: ) expected
+rns4z13w.o0a(201,73): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(201,135): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(201,152): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(201,190): error CS1520: Method must have a return type
+rns4z13w.o0a(201,201): error CS1525: Invalid expression term '{'
+rns4z13w.o0a(201,201): error CS1002: ; expected
+rns4z13w.o0a(201,201): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(201,202): error CS1520: Method must have a return type
+rns4z13w.o0a(202,30): error CS1001: Identifier expected
+rns4z13w.o0a(202,33): error CS1031: Type expected
+rns4z13w.o0a(202,33): error CS1001: Identifier expected
+rns4z13w.o0a(202,35): error CS1031: Type expected
+rns4z13w.o0a(202,35): error CS1001: Identifier expected
+rns4z13w.o0a(202,35): error CS1003: Syntax error, ',' expected
+rns4z13w.o0a(202,39): error CS1031: Type expected
+rns4z13w.o0a(202,39): error CS1001: Identifier expected
+rns4z13w.o0a(202,39): error CS1003: Syntax error, ',' expected
+rns4z13w.o0a(202,45): error CS1520: Method must have a return type
+rns4z13w.o0a(203,30): error CS1001: Identifier expected
+rns4z13w.o0a(203,57): error CS1520: Method must have a return type
+rns4z13w.o0a(205,13): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(206,13): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(207,13): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(207,71): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(207,152): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(207,154): error CS8124: Tuple must contain at least two elements.
+rns4z13w.o0a(207,155): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(208,41): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(208,102): error CS8124: Tuple must contain at least two elements.
+rns4z13w.o0a(208,103): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(209,73): error CS1001: Identifier expected
+rns4z13w.o0a(210,13): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(210,17): error CS1031: Type expected
+rns4z13w.o0a(210,17): error CS8124: Tuple must contain at least two elements.
+rns4z13w.o0a(210,17): error CS1026: ) expected
+rns4z13w.o0a(210,17): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(210,53): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(210,70): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(213,13): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(213,14): error CS1520: Method must have a return type
+rns4z13w.o0a(214,53): error CS1001: Identifier expected
+rns4z13w.o0a(215,13): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(215,41): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(215,67): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(215,71): error CS8124: Tuple must contain at least two elements.
+rns4z13w.o0a(215,72): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(215,73): error CS1520: Method must have a return type
+rns4z13w.o0a(216,26): error CS1520: Method must have a return type
+rns4z13w.o0a(217,26): error CS1001: Identifier expected
+rns4z13w.o0a(217,29): error CS1031: Type expected
+rns4z13w.o0a(217,29): error CS1001: Identifier expected
+rns4z13w.o0a(217,31): error CS1031: Type expected
+rns4z13w.o0a(217,31): error CS1001: Identifier expected
+rns4z13w.o0a(217,31): error CS1003: Syntax error, ',' expected
+rns4z13w.o0a(217,35): error CS1031: Type expected
+rns4z13w.o0a(217,35): error CS1001: Identifier expected
+rns4z13w.o0a(217,35): error CS1003: Syntax error, ',' expected
+rns4z13w.o0a(217,41): error CS1520: Method must have a return type
+rns4z13w.o0a(218,26): error CS1001: Identifier expected
+rns4z13w.o0a(218,43): error CS1520: Method must have a return type
+rns4z13w.o0a(220,9): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(232,5): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(233,1): error CS1022: Type or namespace definition, or end-of-file expected
+rns4z13w.o0a(189,19): error CS0246: The type or namespace name '__tagHelperRunner' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(192,23): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(209,19): error CS0246: The type or namespace name '__tagHelperRunner' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(212,23): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(223,87): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(225,60): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(227,70): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(229,71): error CS0116: A namespace cannot directly contain members such as fields or methods
+rns4z13w.o0a(194,19): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(194,13): error CS0501: '<invalid-global-code>.Write(__tagHelperExecutionContext.Output)' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(182,17): error CS0501: '<invalid-global-code>.BeginContext(?, ?, ?)' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(214,19): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(214,13): error CS0501: '<invalid-global-code>.Write(__tagHelperExecutionContext.Output)' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(196,13): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(199,13): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(204,17): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(216,13): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(219,13): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(197,13): error CS0501: '<invalid-global-code>.BeginContext(?, ?, ?)' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(200,13): error CS0501: '<invalid-global-code>.BeginContext(?, ?, ?)' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(202,17): error CS0501: '<invalid-global-code>.BeginContext(?, ?, ?)' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(217,13): error CS0501: '<invalid-global-code>.BeginContext(?, ?, ?)' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(198,13): error CS0501: '<invalid-global-code>.WriteLiteral()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(203,17): error CS0501: '<invalid-global-code>.WriteLiteral()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(218,13): error CS0501: '<invalid-global-code>.WriteLiteral()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(183,17): error CS0501: '<invalid-global-code>.WriteLiteral()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(184,17): error CS0501: '<invalid-global-code>.EndContext()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(189,46): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(189,13): error CS0246: The type or namespace name 'await' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(189,19): error CS0538: '__tagHelperRunner' in explicit interface declaration is not an interface
+rns4z13w.o0a(189,37): error CS0501: '<invalid-global-code>.RunAsync(__tagHelperExecutionContext)' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(209,46): error CS0246: The type or namespace name '__tagHelperExecutionContext' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(209,13): error CS0246: The type or namespace name 'await' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(209,19): error CS0538: '__tagHelperRunner' in explicit interface declaration is not an interface
+rns4z13w.o0a(209,37): error CS0501: '<invalid-global-code>.RunAsync(__tagHelperExecutionContext)' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(192,17): error CS0246: The type or namespace name 'await' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(192,23): error CS0538: '__tagHelperExecutionContext' in explicit interface declaration is not an interface
+rns4z13w.o0a(192,51): error CS0501: '<invalid-global-code>.SetOutputContentAsync()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(212,17): error CS0246: The type or namespace name 'await' could not be found (are you missing a using directive or an assembly reference?)
+rns4z13w.o0a(212,23): error CS0538: '__tagHelperExecutionContext' in explicit interface declaration is not an interface
+rns4z13w.o0a(212,51): error CS0501: '<invalid-global-code>.SetOutputContentAsync()' must declare a body because it is not marked abstract, extern, or partial
+rns4z13w.o0a(209,37): error CS0111: Type '<invalid-global-code>' already defines a member called '__tagHelperRunner.RunAsync' with the same parameter types
+rns4z13w.o0a(212,51): error CS0111: Type '<invalid-global-code>' already defines a member called '__tagHelperExecutionContext.SetOutputContentAsync' with the same parameter types
+rns4z13w.o0a(214,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'Write' with the same parameter types
+rns4z13w.o0a(199,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'EndContext' with the same parameter types
+rns4z13w.o0a(204,17): error CS0111: Type '<invalid-global-code>' already defines a member called 'EndContext' with the same parameter types
+rns4z13w.o0a(216,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'EndContext' with the same parameter types
+rns4z13w.o0a(219,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'EndContext' with the same parameter types
+rns4z13w.o0a(200,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'BeginContext' with the same parameter types
+rns4z13w.o0a(202,17): error CS0111: Type '<invalid-global-code>' already defines a member called 'BeginContext' with the same parameter types
+rns4z13w.o0a(217,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'BeginContext' with the same parameter types
+rns4z13w.o0a(203,17): error CS0111: Type '<invalid-global-code>' already defines a member called 'WriteLiteral' with the same parameter types
+rns4z13w.o0a(218,13): error CS0111: Type '<invalid-global-code>' already defines a member called 'WriteLiteral' with the same parameter types
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()

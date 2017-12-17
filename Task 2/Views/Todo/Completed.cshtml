@@ -1,0 +1,36 @@
+﻿@using Task_2.Models
+@model Task_2.Models.CompletedViewModel
+@{
+    ViewData["Title"] = "Completed To-do List";
+    Layout = "_Layout";
+}
+
+
+<html>
+<br />
+<h1>Completed Todos</h1>
+<a asp-controller="Todo" asp-action="Index"><b>Go back</b></a>
+<head>
+
+    @if (Model != null)
+    {
+        <br/>
+        <br/>
+        foreach (TodoViewModel tv in Model.TodoList)
+        {
+            <span style="margin-right: 5px"><b>@tv.Title</b></span>
+            <br/>
+            @(tv.DateCompleted.GetValueOrDefault().ToLongDateString())
+            <br/>
+            <b>@Html.ActionLink("Remove from completed", "RemoveFromCompleted", new {id = tv.id})</b>
+            <br/>
+            <br/>
+            <br/>
+        }
+    }
+</head>
+<body>
+<div>
+</div>
+</body>
+</html>

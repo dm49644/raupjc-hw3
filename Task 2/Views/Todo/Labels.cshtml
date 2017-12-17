@@ -1,0 +1,35 @@
+﻿@using Task_2.Models
+@model Task_2.Models.LabelViewModel
+@{
+    ViewData["Title"] = "Labels";
+    Layout = "_Layout";
+}
+
+<html>
+<br />
+<h1>Labels</h1>
+<a asp-controller="Todo" asp-action="AddLabel"><span style="margin-right: 20px"><b>Add new label</b></span></a>
+<head>
+
+    @if (Model != null)
+    {
+        <br />
+        <br />
+        foreach (AddLabelModel alm in Model.LabelList)
+        {
+            <span style="margin-right: 5px"><b>@alm.label</b></span>
+            <br />
+            <b>@Html.ActionLink("Update", "UpdateLabel", new { id = alm.id })</b>
+            <br />
+            <b>@Html.ActionLink("Delete", "RemoveLabel", new { id = alm.id })</b>
+            <br />
+            <br />
+        }
+    }
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
+

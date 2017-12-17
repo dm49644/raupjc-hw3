@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+    Layout = "_Layout";
+}
+@model Models.AddLabelModel
+
+
+<html>
+<br />
+<h1>Update to-do label</h1>
+<body>
+<div>
+    <form asp-action="AddLabel" method="post">
+        <br/>
+        To-do label: <input asp-for="label" class="form-control" /> <span asp-validation-for="label"></span> <br />
+        <input type="submit" />
+    </form>
+</div>
+</body>
+</html>

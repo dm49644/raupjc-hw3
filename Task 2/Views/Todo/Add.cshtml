@@ -1,0 +1,21 @@
+﻿@model Models.AddTodoViewModel
+@{
+    ViewData["Title"] = "Add";
+    Layout = "_Layout";
+}
+
+<html>
+<br />
+<h1>Add to-do</h1>
+<body>
+<div>
+    <form asp-action="Add" method="post">
+        <br />
+        To-do: <input asp-for="text" class="form-control" /> <span asp-validation-for="text"></span> <br />
+        Date Due: <input asp-for="dateDue" class="form-control" /> <span asp-validation-for="dateDue"></span> <br />
+        @Html.DropDownList("Labels", Model.labels , new { @class = "form-control" })
+        <input type="submit" />
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿@model Models.AddLabelModel
+@{
+    ViewData["Title"] = "AddLabel";
+    Layout = "_Layout";
+}
+
+<html>
+<br />
+<h1>Add to-do label</h1>
+<body>
+    <div>
+        <form asp-action="AddLabel" method="post">
+            <br/>
+            To-do label: <input asp-for="label" class="form-control" /> <span asp-validation-for="label"></span> <br />
+            <input type="submit" />
+        </form>
+    </div>
+</body>
+</html>
