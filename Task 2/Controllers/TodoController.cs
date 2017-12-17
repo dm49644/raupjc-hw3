@@ -65,9 +65,9 @@ namespace Task_2.Controllers
                     Text = element.Value
                 });
             }
-            model.labels = selectList;
+            model.Options = selectList;
             
-            return View();
+            return View(model);
         }
 
         public async Task<IActionResult> MarkAsCompleted(Guid id)
@@ -111,6 +111,13 @@ namespace Task_2.Controllers
                 TodoItem ti=new TodoItem(model.text, new Guid(currentUser.Id));
                 ti.DateDue = model.dateDue;
                 _repository.Add(ti);
+                foreach (String s in model.SelectedOptions)
+                {
+                    TodoItemLabel til=_repository.GetLabel(Guid.Parse(s));
+                    Console.WriteLine(til.Value);
+                    ti.Labels.Add(til);
+                }
+
                 return RedirectToAction("Index");
             }
             return View(model);

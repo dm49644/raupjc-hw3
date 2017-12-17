@@ -13,8 +13,12 @@
         <br />
         To-do: <input asp-for="text" class="form-control" /> <span asp-validation-for="text"></span> <br />
         Date Due: <input asp-for="dateDue" class="form-control" /> <span asp-validation-for="dateDue"></span> <br />
-        @Html.DropDownList("Labels", Model.labels , new { @class = "form-control" })
-        <input type="submit" />
+        @using(Html.BeginForm()){ 
+            <label> Select items </label>
+            @Html.ListBoxFor(s=>s.SelectedOptions,Model.Options)
+            <input type="submit" />
+        }
+
     </form>
 </div>
 </body>

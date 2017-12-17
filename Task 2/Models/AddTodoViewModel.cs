@@ -14,6 +14,7 @@ namespace Task_2.Models
 
         public DateTime? dateDue { get; set; }
 
-        public IEnumerable<SelectListItem> labels { get; set; }
+        public IEnumerable<SelectListItem> Options { set; get; }
+        public string[] SelectedOptions { set; get; }
     }
 }
